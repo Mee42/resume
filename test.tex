@@ -8,44 +8,117 @@
 \usepackage{textcomp}
 \usepackage{tgpagella}
 \usepackage{minted}
+\usepackage{multicol}
+\usepackage{hyperref}
 
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
 
-\title{Title}
+\title{}
 \author{Carson Graham}
+\date{}
 
 
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue!60!black, %Colour for external hyperlinks
+  linkcolor    = blue!50!black, %Colour of internal links
+  citecolor    = red %Colour of citations
+}
+
+\renewcommand\labelitemi{---} % this is the list item hyphen
+
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.35ex}{\footnotesize\bf ++}}
+
+% write \code{} and have it formamtted as code. Only for inline text
+\def\code#1{\texttt{#1}}
 
 \begin{document}
 
     \maketitle
 
+    \section*{Contact info}
 
-    here is lots of text.
-    I have no work experience and no college degree.
-    I I'm not sure why this is written in \LaTeX,
-    but why not I guess
+        You can reach me through email at \href{mailto:carson42g@gmail.com}{carson42g@gmail.com}
+        and my GitHub account \href{https://github.com/mee42/}{mee42}
 
-    I know math
+    \section*{Skills}
 
-    $$ x = \frac{ -b \pm \sqrt{a ^ 2 - 4ac}}{2a} $$
+    \begin{itemize}
+        \item Extensive experience with Java and Kotlin, two JVM languages.
+        \item Experience with low-level langauges C, \CPP, and x86\_64 Assembly.
+        \item Experience with functional programming paradigms in the forms of Haskell and Kotlin
+        \item Experience with standard GNU/Linux systems and programs, specifically Debian and Arch Linux.
+        \item Minor experience in scripting languages such as Bash and Python.
+        \item Experience with build tools such as Makefile, Makepkg, and Gradle.
+        \item Leadership experience (see: Robotics, CSCS)
+    \end{itemize}
 
-    look, \fbox{this is in a box}
+    \hrule
+    \vspace{-0.4em}
 
-    this could be nice for notes
+    \section*{Leadership}
+    \subsection*{Oakton FRC Robotics Club}
 
+    I am one of the two programming leads for the Oakton HS FRC team,
+    a competitive robotics competition.
+    During season, which is 6-10 weeks, we meet about 10-30 hours a week.
+    I was the main lead and, along with our 2 existing members,
+    helped our 3 new programmers learn both \CPP and Git.
+    Under my guidance we adopted a mix of git-flow and trunk-based development,
+    which is documented on the wiki \href{https://github.com/CougarProgramming623/InfiniteRecharge/wiki/Git}{here}.
+
+    \subsection*{Oakton CSCS Club}
+
+    I'm the president of the Oakton CSCS (Computer Science and Cyber Security) Club,
+    one of the largest student-run clubs at my highschool. 
+    We have a team of 6 officers and a club of about 50 offical members -- and 150 members on our public Discord server.
+    We go to Cyber Patriot, as well as several other CTFs and Computer Science competitions, and we have plans to host our own hackathon.
+    As the president, my job is to make sure everything gets done,
+    which is mainly planning meetings and club projects.
+
+    \vspace{1em}
+    \hrule
+
+    \section*{Formal Education}
+    \begin{itemize}
+        \item AP Computer Science A, \textit{Intro to Java and Compure Science}
+        \item Advanced Computer Science AB, \textit{Data Structures and Algorithms}
+        \item Oracle Assocate Certification, \textit{Foundations to Java SE 8}
+    \end{itemize}
+
+    \vspace{0.5em}
+    \hrule
+
+    \section*{Personal Projects}
+
+    \subsection*{Vision Pipeline}
+    \href{https://github.com/CougarProgramming623/vision-pipeline}{Github}. 
     
-    $$ \frac{2}{\sqrt{7e}} \pm 8 $$
+    In robotics, being able to estimate the robot's prose in relation to the target
+    allows you to autonomusly drive the robot better then a human can from 50 feet away.
+    In the 2020 season, the goal was to shoot a ball through a hole from about 20 feet away,
+    and the hope was to use a camera and some code to aim at the goal and fire with accuracy.
+    unfortunatly, this wasn't production-ready by the competition,
+    but I still learned a lot about opencv and solvepnp-type problems. 
 
-    \textsf{is this monospace}
+    \subsection*{Xenon}
+    \href{https://github.com/Mee42/Xenon}{Github}.
+    
+    Xenon is a 64 bit native programming language similar to C.
+    Currently written in Kotlin, a self-hosted compiler is planned for the future.
+    The backend is x86\_64 NASM, a form of assembly,
+    but may switch to a purely native backend eventually.
+    
+    The entire compiler is written by me, utalizing a regex-matching lexer, 
+    a simple recursive decent parser,
+    and semantic checks for type safety.
+    The compiler output Intel assembly,
+    and \code{nasm} and \code{gcc} is used to link in some simple standard library functions such as
+    \code{malloc} and \code{printf}.
 
-    \textbf{Some more math}
-
-
-    \fbox {box time}
-
-    $$\int_0^1 \frac{1}{e^x} = \frac{e-1}{e}$$
-    $$ \frac{7}{\sqrt{7}} $$
 
 \end{document}
