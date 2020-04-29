@@ -10,12 +10,15 @@
 \usepackage{minted}
 \usepackage{multicol}
 \usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{changepage}
+
 
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
 
-\title{}
-\author{Carson Graham}
+\title{Carson Graham}
+\author{}
 \date{}
 
 
@@ -28,30 +31,59 @@
 
 \renewcommand\labelitemi{---} % this is the list item hyphen
 
+\def\link#1#2{\color{blue!60!black}\href{#1}{#2}\color{black}}
+
 
 % make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}
 {C\nolinebreak[4]\hspace{-.05em}\raisebox{.35ex}{\footnotesize\bf ++}}
+
+\newcommand{\email}
+{carson42g\raisebox{-0.2ex}{@}gmail.com}
+
+\newcommand{\github}
+{github.com\hspace{-0.007em}/\hspace{-0.05em}{mee42}}
 
 % write \code{} and have it formamtted as code. Only for inline text
 \def\code#1{\texttt{#1}}
 
 \begin{document}
 
-    \maketitle
+    \begin{center}
+        \huge Carson Graham
+    \end{center}
 
-    \section*{Contact info}
+    \begin{adjustwidth}{0em}{0em}
+        \begin{multicols}{3}
+            \begin{center}
+                \link{mailto:carson42g@gmail.com}{\email}
+            \end{center}
+            \columnbreak
+            \begin{center}
+                \link{https://github.com/mee42/}{\github}
+            \end{center}
+            \columnbreak
+            \begin{center}
+                Fairfax Virginia
+            \end{center}
+        \end{multicols}
+    \end{adjustwidth}
+    \vspace{-1em}
+    \begin{center}
+        \code{GPG: \link{https://keys.openpgp.org/search?q=BB881A11F78A79D93FAB707D67D77A4726CF8D6F}{BB881A11F78A79D93FAB707D67D77A4726CF8D6F}}
+     \end{center}
 
-        You can reach me through email at \href{mailto:carson42g@gmail.com}{carson42g@gmail.com}
-        and my GitHub account \href{https://github.com/mee42/}{mee42}
+        
 
     \section*{Skills}
 
     \begin{itemize}
         \item Extensive experience with Java and Kotlin, two JVM languages.
         \item Experience with low-level langauges C, \CPP, and x86\_64 Assembly.
-        \item Experience with functional programming paradigms in the forms of Haskell and Kotlin
+        \item Experience with functional programming paradigms in the forms of Haskell and Kotlin.
         \item Experience with standard GNU/Linux systems and programs, specifically Debian and Arch Linux.
+        \item Experience with SQL, specifically SQLite.
+        \item Experience in basic web development, HTML/CSS/JS, as well as using Kotlin/JS.
         \item Minor experience in scripting languages such as Bash and Python.
         \item Experience with build tools such as Makefile, Makepkg, and Gradle.
         \item Leadership experience (see: Robotics, CSCS)
@@ -69,25 +101,28 @@
     I was the main lead and, along with our 2 existing members,
     helped our 3 new programmers learn both \CPP and Git.
     Under my guidance we adopted a mix of git-flow and trunk-based development,
-    which is documented on the wiki \href{https://github.com/CougarProgramming623/InfiniteRecharge/wiki/Git}{here}.
+    which is documented on the wiki \link{https://github.com/CougarProgramming623/InfiniteRecharge/wiki/Git}{here}.
+    I was also a Dean's List Semifinalists for FIRST robotics,
+    an individual competition for personal experience and accomplishments.
 
-    \subsection*{Oakton CSCS Club}
+    \subsection*{Oakton Computer Science and Cyber Security Club}
 
     I'm the president of the Oakton CSCS (Computer Science and Cyber Security) Club,
     one of the largest student-run clubs at my highschool. 
     We have a team of 6 officers and a club of about 50 offical members -- and 150 members on our public Discord server.
-    We go to Cyber Patriot, as well as several other CTFs and Computer Science competitions, and we have plans to host our own hackathon.
-    As the president, my job is to make sure everything gets done,
-    which is mainly planning meetings and club projects.
+    We go to Cyber Patriot, as well as several other CTFs and Computer Science competitions,
+    and we have plans to host our own hackathon.
+    As the president, my job is to make sure everything gets done, planning meeting adgendas and club projects,
+    and sharing my technical experience with other club members. 
 
     \vspace{1em}
     \hrule
 
-    \section*{Formal Education}
+    \section*{Formal Education and Certifications}
     \begin{itemize}
-        \item AP Computer Science A, \textit{Intro to Java and Compure Science}
+        \item AP Computer Science A (Scored a 5 on the AP test freshman year), \textit{Intro to Java and Computer Science}
         \item Advanced Computer Science AB, \textit{Data Structures and Algorithms}
-        \item Oracle Assocate Certification, \textit{Foundations to Java SE 8}
+        \item Oracle Assocate Certification (Aquired at age 14), \textit{Foundations to Java SE 8}
     \end{itemize}
 
     \vspace{0.5em}
@@ -95,21 +130,24 @@
 
     \section*{Personal Projects}
 
-    \subsection*{Vision Pipeline}
+    \subsection*{Vision Pipeline, a computer vision project for pose estimation}
     \href{https://github.com/CougarProgramming623/vision-pipeline}{Github}. 
     
-    In robotics, being able to estimate the robot's prose in relation to the target
+    In robotics, being able to estimate the robot's pose in relation to the target
     allows you to autonomusly drive the robot better then a human can from 50 feet away.
     In the 2020 season, the goal was to shoot a ball through a hole from about 20 feet away,
     and the hope was to use a camera and some code to aim at the goal and fire with accuracy.
-    unfortunatly, this wasn't production-ready by the competition,
+    Unfortunatly, this wasn't production-ready by the competition,
     but I still learned a lot about opencv and solvepnp-type problems. 
 
-    \subsection*{Xenon}
+    \vspace{0.5em}
+    \noindent Uses \CPP
+
+    \subsection*{Xenon, my personal programming language}
     \href{https://github.com/Mee42/Xenon}{Github}.
     
     Xenon is a 64 bit native programming language similar to C.
-    Currently written in Kotlin, a self-hosted compiler is planned for the future.
+    While it is currently written in Kotlin, a self-hosted compiler is planned for the future.
     The backend is x86\_64 NASM, a form of assembly,
     but may switch to a purely native backend eventually.
     
@@ -119,6 +157,29 @@
     The compiler output Intel assembly,
     and \code{nasm} and \code{gcc} is used to link in some simple standard library functions such as
     \code{malloc} and \code{printf}.
+    
+    \vspace{0.5em}
+    \noindent Uses C, Assembly, Kotlin, Xenon
+
+    \subsection*{ADN, a content delivery server}
+    
+    \href{https://github.com/mee42/adn}{Github}.
+    
+    \code{ADN} is a content distribution server for quick and easy content distribution.
+    I primarily designed it so I couldsend code and images to people through quick macros.
+    This project has a server side and a CLI interface which communicate over a https API.
+    The API lets users send in some text or an image
+    and returns with a url that can be used to access that content again.
+    When visiting the url, text code content will by syntax highlighted,
+    making it a great platform for sharing code.
+
+    I made this because sharing images can be a tedius task -- 
+    and this tool lets me take a screenshot with a couple keystrokes,
+    and then automaticly puts the link it my clipboard,
+    making sharing images painless and easy.
+
+    \vspace{0.5em}
+    \noindent Uses HTML, JS, CSS, Kotlin
 
 
 \end{document}
