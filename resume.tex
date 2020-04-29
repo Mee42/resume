@@ -9,7 +9,7 @@
 \usepackage{tgpagella}
 \usepackage{minted}
 \usepackage{multicol}
-\usepackage{hyperref}
+\usepackage[colorlinks=true,allcolors=.]{hyperref}
 \usepackage{multicol}
 \usepackage{changepage}
 
@@ -23,11 +23,13 @@
 
 
 \hypersetup{
-  colorlinks   = true, %Colours links instead of ugly boxes
-  urlcolor     = blue!60!black, %Colour for external hyperlinks
-  linkcolor    = blue!50!black, %Colour of internal links
-  citecolor    = red %Colour of citations
+ % colorlinks   = true, %Colours links instead of ugly boxes
+ %lor     = blue!60!black, %Colour for external hyperlinks
+ % linkcolor    = back, %Colour of internal links
+ % citecolor    = red %Colour of citations
+  pdftitle={Carson Graham Resume}
 }
+
 
 \renewcommand\labelitemi{---} % this is the list item hyphen
 
@@ -101,7 +103,7 @@
     I was the main lead and, along with our 2 existing members,
     helped our 3 new programmers learn both \CPP and Git.
     Under my guidance we adopted a mix of git-flow and trunk-based development,
-    which is documented on the wiki \link{https://github.com/CougarProgramming623/InfiniteRecharge/wiki/Git}{here}.
+    which is documented on the wiki \href{https://github.com/CougarProgramming623/InfiniteRecharge/wiki/Git}{here}.
     I was also a Dean's List Semifinalists for FIRST robotics,
     an individual competition for personal experience and accomplishments.
 
@@ -176,7 +178,7 @@
     I made this because sharing images can be a tedius task -- 
     and this tool lets me take a screenshot with a couple keystrokes,
     and then automaticly puts the link it my clipboard,
-    making sharing images painless and easy.
+    making sharing images and code painless and easy.
 
     \vspace{0.5em}
     \noindent Uses HTML, JS, CSS, Kotlin
