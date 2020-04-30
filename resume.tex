@@ -1,7 +1,7 @@
 \documentclass[10pt,letterpaper]{article}
 
 
-\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[letterpaper,margin=0.75in,voffset=-15pt]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{mdwlist}
 \usepackage[T1]{fontenc}
@@ -16,10 +16,6 @@
 
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
-
-\title{Carson Graham}
-\author{}
-\date{}
 
 
 \hypersetup{
@@ -49,16 +45,23 @@
 % write \code{} and have it formamtted as code. Only for inline text
 \def\code#1{\texttt{#1}}
 
-\begin{document}
+\pagestyle{myheadings}
+\markright{Carson Graham\hfill}
 
+\begin{document}
+    \thispagestyle{empty}
     \begin{center}
         \huge Carson Graham
     \end{center}
 
     \begin{adjustwidth}{0em}{0em}
-        \begin{multicols}{3}
+        \begin{multicols}{4}
             \begin{center}
                 \link{mailto:carson42g@gmail.com}{\email}
+            \end{center}
+            \columnbreak
+            \begin{center}
+                572-577-7872
             \end{center}
             \columnbreak
             \begin{center}
@@ -66,7 +69,7 @@
             \end{center}
             \columnbreak
             \begin{center}
-                Fairfax Virginia
+                Fairfax, Virginia
             \end{center}
         \end{multicols}
     \end{adjustwidth}
@@ -80,7 +83,7 @@
     \section*{Skills}
 
     \begin{itemize}
-        \item Extensive experience with Java and Kotlin, two JVM languages.
+        \item Extensive experience with Java (5 years) and Kotlin (2 years), two JVM languages.
         \item Experience with low-level langauges C, \CPP, and x86\_64 Assembly.
         \item Experience with functional programming paradigms in the forms of Haskell and Kotlin.
         \item Experience with standard GNU/Linux systems and programs, specifically Debian and Arch Linux.
@@ -95,7 +98,7 @@
     \vspace{-0.4em}
 
     \section*{Leadership}
-    \subsection*{Oakton FRC Robotics Club}
+    \subsection*{Oakton HS FRC Robotics Club, Programming Lead}
 
     I am one of the two programming leads for the Oakton HS FRC team,
     a competitive robotics competition.
@@ -103,16 +106,16 @@
     I was the main lead and, along with our 2 existing members,
     helped our 3 new programmers learn both \CPP and Git.
     Under my guidance we adopted a mix of git-flow and trunk-based development,
-    which is documented on the wiki \href{https://github.com/CougarProgramming623/InfiniteRecharge/wiki/Git}{here}.
+    which is documented on the project \link{https://github.com/CougarProgramming623/InfiniteRecharge/wiki/Git}{wiki}.
     I was also a Dean's List Semifinalists for FIRST robotics,
     an individual competition for personal experience and accomplishments.
 
-    \subsection*{Oakton Computer Science and Cyber Security Club}
+    \subsection*{Oakton HS Computer Science and Cyber Security Club, President}
 
     I'm the president of the Oakton CSCS (Computer Science and Cyber Security) Club,
     one of the largest student-run clubs at my highschool. 
     We have a team of 6 officers and a club of about 50 offical members -- and 150 members on our public Discord server.
-    We go to Cyber Patriot, as well as several other CTFs and Computer Science competitions,
+    We participate Cyber Patriot, as well as several other CTFs and Computer Science competitions,
     and we have plans to host our own hackathon.
     As the president, my job is to make sure everything gets done, planning meeting adgendas and club projects,
     and sharing my technical experience with other club members. 
@@ -122,13 +125,14 @@
 
     \section*{Formal Education and Certifications}
     \begin{itemize}
-        \item AP Computer Science A (Scored a 5 on the AP test freshman year), \textit{Intro to Java and Computer Science}
+        \item AP Computer Science A, \textit{Intro to Java and Computer Science}  (Scored a 5 on the AP test freshman year)
         \item Advanced Computer Science AB, \textit{Data Structures and Algorithms}
-        \item Oracle Assocate Certification (Aquired at age 14), \textit{Foundations to Java SE 8}
+        \item Oracle Assocate Certification, \textit{Foundations to Java SE 8} (Aquired at age 14)
+        \item Oakton High School student, expected to graduate 2022 with an advanced deploma.
     \end{itemize}
 
-    \vspace{0.5em}
     \hrule
+    
 
     \section*{Personal Projects}
 
@@ -144,7 +148,8 @@
 
     \vspace{0.5em}
     \noindent Uses \CPP
-
+    
+    
     \subsection*{Xenon, my personal programming language}
     \href{https://github.com/Mee42/Xenon}{Github}.
     
@@ -168,16 +173,16 @@
     \href{https://github.com/mee42/adn}{Github}.
     
     \code{ADN} is a content distribution server for quick and easy content distribution.
-    I primarily designed it so I couldsend code and images to people through quick macros.
+    I primarily designed it so I could send code and images to people through quick macros.
     This project has a server side and a CLI interface which communicate over a https API.
     The API lets users send in some text or an image
     and returns with a url that can be used to access that content again.
     When visiting the url, text code content will by syntax highlighted,
     making it a great platform for sharing code.
 
-    I made this because sharing images can be a tedius task -- 
-    and this tool lets me take a screenshot with a couple keystrokes,
-    and then automaticly puts the link it my clipboard,
+    Sharing images can be a tedous task -- 
+    this tool lets me take a screenshot with a couple keystrokes,
+    then automaticly puts the link on the clipboard,
     making sharing images and code painless and easy.
 
     \vspace{0.5em}
