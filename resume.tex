@@ -45,7 +45,9 @@
 \newcommand{\github}
 {github.com\hspace{-0.007em}/\hspace{-0.05em}{mee42}}
 
-% write \code{} and have it formamtted as code. Only for inline text
+\setlength\parindent{24pt}
+
+% write \code{} and have it formamted as code. Only for inline text
 \def\code#1{\texttt{#1}}
 
 \def\paddedItem#1{\vspace{-0.4em}\item #1}
@@ -149,31 +151,26 @@
         but uses Machine Learning (ML) to reshuffle the resulting documents so the most relevant results
         are the first results the end user sees, without any change any existing infrastructure, frontend, or database.
         
-        \hspace{24px} I mainly focus on the demo frontend, as well as setting up the development/prod environments. 
-        I also helped present this project during a presentation to the whole company. 
+        \hspace{24px} I mainly focus on the demo frontend, as well as setting up the development/production environments. 
+        I also helped present this project during a presentation to the entire company. 
 
-        Uses Docker, Python, Pytorch, and Flask for the backend, and Docker, React, HTML/CSS/JS for the demo frontend.
+        \textbf{Uses Docker, Python, Pytorch, and Flask for the backend, and Docker, React, HTML/CSS/JS for the demo frontend.
         Deployed onto an AWS EC2 instance, managed by a ECS Cluster. We used AWS ECR for our docker container registry.
-        Nginx was used as a reverse proxy, offering subdomain and HTTPS support.
+        Nginx was used as a reverse proxy, offering subdomain and HTTPS support.}
+
+        \paddedItem I was involved with a project aiming to read project proposals and flag statements as okay/not okay,
+            using machine learning.
+        
+        \textbf{Used Angular, Typescript (frontend), Python, Flask, Pytorch}
+ 
 
         \paddedItem I worked for 3 weeks on a prototype for some software with potential to be used by the US Military. 
         
-        Uses \Csh, WPF
+        \textbf{Uses \Csh, WPF}
     \end{itemize}
     
     \section*{Personal Projects}
 
-    \subsection*{Vision Pipeline, a computer vision project for pose estimation}
-    \link{https://github.com/CougarProgramming623/vision-pipeline}{Github Link}. 
-    
-    In robotics, being able to estimate the robot's pose in relation to the target
-    allows you to autonomously drive the robot better then a human can from 50 feet away.
-    In the 2020 season, the goal was to shoot a ball through a hole from about 20 feet away,
-    and the hope was to use a camera and some code to aim at the goal and fire with accuracy.
-    This had moderate success, but was not completed in time for the competition.
-
-    \vspace{0.5em}
-    \noindent Uses \CPP, OpenCV
 
     \subsection*{Xenon, my personal programming language \textit{TODO change this to "Programming Language Development". Talk about Xenon and the ML/haskell derivitive (give that project a name). Skip the technical details.}}
     \link{https://github.com/Mee42/Xenon}{Github Link}.
@@ -185,6 +182,28 @@
     
     \vspace{0.5em}
     \noindent Uses C, Assembly, Kotlin, Xenon
+
+    \subsection*{Personal Website}
+    \link{https://mee42.dev}{https://mee42.dev}
+
+    I created my personal website for publishing projects and blog posts, and host it on my domain, mee42.dev.
+    
+    \vspace{0.5em}
+    \noindent It's built up with Next/JS and ReactJS as the framework, written in Typescript/TSX and SCSS with CSS-in-JS.
+    Deployment is handled with Docker/Docker Compose, and is self-hosted. NGINX is used for load balancing and HTTPS support.  
+    
+
+    \subsection*{Vision Pipeline, a computer vision project for pose estimation}
+    \link{https://github.com/CougarProgramming623/vision-pipeline}{Github Link}.
+    
+    In robotics, being able to estimate the robot's pose in relation to the target
+    allows you to autonomously drive the robot better then a human can from 50 feet away.
+    In the 2020 season, the goal was to shoot a ball through a hole from about 20 feet away,
+    and the hope was to use a camera and some code to aim at the goal and fire with accuracy.
+    This had moderate success, but was not completed in time for the competition.
+
+    \vspace{0.5em}
+    \noindent Uses \CPP, OpenCV
 
     \subsection*{ADN, a content delivery server}
     
